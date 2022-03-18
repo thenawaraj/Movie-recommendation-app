@@ -3,12 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>Form</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
+
+  body{
+   font-family: 'Poppins', sans-serif;
+   }
+
+   .form-home{
+    padding: 50px;
+    display: flex;
+    justify-content:center;
+    }
+
+    h2{
+    display:flex;
+    justify-content:center;
+    color:#fe2c55;
+    }
+
+    input{
+    width: 24%;
+    outline: none;
+    border: none;
+    }
+
+   .input-text{
+   padding: 15px;
+   border:1px solid #fe2c55;
+    }
+
+   .search-button{
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    background-color: #fe2c55;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    }
+    </style>
 </head>
 <body>
-  <form action="/read_input" method="post" enctype= multipart/form-data >
+<h2>Movie Recommendation System</h2>
+  <form  action="/read_input" method="post" enctype= multipart/form-data >
           {% csrf_token %}
-    <input type="text" name="val"/>
-      <input type="submit"/>
+      <div class="form-home">
+          <input class="input-text" type="text" name="val"/>
+      <button  class="search-button" type="submit">Search</button>
+      </div>
   </form>
 
 </body>

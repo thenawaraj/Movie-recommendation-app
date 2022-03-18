@@ -1,5 +1,5 @@
+# loading libraries
 import json
-
 from django.shortcuts import render
 import pandas as pd
 import difflib
@@ -7,7 +7,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 # Reading csv file
-movie_data = pd.read_csv('F:/movieapp/recommendapp/recommendapp/movie_datasets.csv')
+movie_data = pd.read_csv('F:/PROJECT MOVIE/movie-recommendation-app/recommendapp/recommendapp/movie_datasets.csv')
 
 
 def Make_Recommend():
@@ -71,22 +71,20 @@ def read_input(request):
                 # eg:iloc[0:4,0:7] note:last index value is not considered we will get the value from 0 to 3 in rows.
 
                 required_movie_array.append(movie_data.iloc[movie[0:1]])
-                # for show in required_movie_array[0:6]:
-                #     print(show)
             # response = "".join(str(re) for re in required_movie_array)
             # response = " ".join([str(x) for x in required_movie_array])
             # response = "".join(map(str, required_movie_array))
             response = required_movie_array
             return render(request, "home.html", {"data": response})
     else:
-        response = "Apologies, but no results were found."
+        response = ""
     return render(request, "notfound.html", {"data": response})
 
 
 def print_hi(request):
     # movie_data = pd.read_csv('F:/movieapp/recommendapp/recommendapp/movie_datasets.csv')
     # movie_data = pd.read_json('F:/movieapp/recommendapp/recommendapp/movie_datasets.json')
-    with open('F:/movieapp/recommendapp/recommendapp/movie_datasets.json') as file_object:
+    with open('F:/PROJECT MOVIE/movie-recommendation-app/recommendapp/recommendapp/datasets.json') as file_object:
         movie_datas = json.load(file_object)
         print("movie")
         context = {
