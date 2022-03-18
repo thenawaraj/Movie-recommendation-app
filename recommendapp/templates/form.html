@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,7 +10,13 @@
   body{
    font-family: 'Poppins', sans-serif;
    }
-
+    .bg{
+    background-image: url({% static "assets/images.jpg" %});
+    background-size: 2000px 900px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    }
    .form-home{
     padding: 50px;
     display: flex;
@@ -43,7 +50,7 @@
     }
     </style>
 </head>
-<body>
+<body class="bg" >
 <h2>Movie Recommendation System</h2>
   <form  action="/read_input" method="post" enctype= multipart/form-data >
           {% csrf_token %}
