@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie</title>
+</head>
+<body>
+
+{% for movie in data %}
+<img src="{{movie.image}}" alt="" srcset="">
+<div class="title-area">
+    <p>{{movie.title}}</p>
+</div>
+<div class="crew-area">
+    <p>{{movie.crew}}</p>
+
+</div>
+<div class="genre-area">
+    <p>{{movie.genre}}</p>
+
+</div>
+{% endfor %}
+
+</body>
+</html>
