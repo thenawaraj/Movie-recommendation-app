@@ -13,8 +13,9 @@
    }
     .bg{
     background-image: url({% static "assets/images14.jpg" %});
-    background-size: 1537px 820px
+    background-size: 1537px 820px;
     }
+
    .form-home{
     padding: 50px;
     display: flex;
@@ -48,10 +49,17 @@
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
     }
+
+    .main-home{
+<!--    background-color:green;-->
+
+    }
     </style>
 </head>
 <body class="bg" >
-<h2>Movie Recommendation System</h2>
+    <div class="main-home">
+
+     <h2>Movie Recommendation System</h2>
   <form  action="/read_input" method="post" enctype= multipart/form-data >
           {% csrf_token %}
       <div class="form-home">
@@ -59,6 +67,9 @@
       <button  class="search-button" type="submit">Search</button>
       </div>
   </form>
+
+
+    </div>
 
 </body>
 </html>

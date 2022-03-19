@@ -77,7 +77,7 @@ def read_input(request):
             response = required_movie_array
             return render(request, "home.html", {"data": response})
     else:
-        response = ""
+        response = x
     return render(request, "notfound.html", {"data": response})
 
 
