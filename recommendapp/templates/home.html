@@ -7,11 +7,13 @@
     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
     body{
    font-family: 'Poppins', sans-serif;
+   background-color:#676FA3;
+   color:#CDDEFF;
      }
 
     .movie-wrapper{
     display:flex;
-    <!--border:5px solid red;-->
+<!--    border:5px solid red;-->
     }
 
     .image-area img{
@@ -27,16 +29,18 @@
     .movie-card{
     padding:10px;
     display:grid;
-    <!--background-color:green;-->
+<!--    background-color:green;-->
     }
     .title-area{
     font-size:16px;
-    color:#fe2c55;
+<!--    color:#fe2c55;-->
     font-weight:500;
     }
+
     </style>
 
     <body>
+    <h3>Search Results:</h3>
     <div class="movie-wrapper">
         {% for movie in data %}
         <div class="movie-card">
